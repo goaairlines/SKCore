@@ -49,7 +49,6 @@
 		OBJ_74 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Topic.swift */; };
 		OBJ_75 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* User.swift */; };
 		OBJ_76 /* UserGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* UserGroup.swift */; };
-		OBJ_83 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_94 /* SKCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* SKCoreTests.swift */; };
 		OBJ_95 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* XCTestManifests.swift */; };
 		OBJ_97 /* SKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SKCore::SKCore::Product" /* SKCore.framework */; };
@@ -102,10 +101,9 @@
 		OBJ_35 /* UserGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroup.swift; sourceTree = "<group>"; };
 		OBJ_38 /* SKCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKCoreTests.swift; sourceTree = "<group>"; };
 		OBJ_39 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		"SKCore::SKCore::Product" /* SKCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SKCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"SKCore::SKCoreTests::Product" /* SKCoreTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SKCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SKCore::SKCoreTests::Product" /* SKCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = SKCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +156,6 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
-				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_36 /* Tests */,
 				OBJ_42 /* Products */,
@@ -264,6 +261,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					"SKCore::SKCore" = {
+						LastSwiftMigration = 1000;
+					};
+					"SKCore::SKCoreTests" = {
+						LastSwiftMigration = 1000;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "SKCore" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -324,7 +329,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_83 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +424,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = SKCore;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -446,7 +450,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = SKCore;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -496,7 +500,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = SKCoreTests;
 			};
 			name = Debug;
@@ -515,7 +519,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = SKCoreTests;
 			};
 			name = Release;
