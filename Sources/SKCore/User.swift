@@ -26,30 +26,46 @@ public struct User {
         public var firstName: String?
         public var lastName: String?
         public var realName: String?
+        public var displayName: String?
         public var email: String?
         public var phone: String?
+        public var skype: String?
+        public var statusText: String?
+        public var statusEmoji: String?
+        public var title: String?
         public var image24: String?
         public var image32: String?
         public var image48: String?
         public var image72: String?
         public var image192: String?
+        public var image512: String?
+        public var image1024: String?
+        public var imageOriginal: String?
         public var customProfile: CustomProfile?
-
+        
         public init(profile: [String: Any]?) {
             firstName = profile?["first_name"] as? String
             lastName = profile?["last_name"] as? String
             realName = profile?["real_name"] as? String
+            displayName = profile?["display_name"] as? String
             email = profile?["email"] as? String
             phone = profile?["phone"] as? String
+            skype = profile?["skype"] as? String
+            statusText = profile?["status_text"] as? String
+            statusEmoji = profile?["status_emoji"] as? String
+            title = profile?["title"] as? String
             image24 = profile?["image_24"] as? String
             image32 = profile?["image_32"] as? String
             image48 = profile?["image_48"] as? String
             image72 = profile?["image_72"] as? String
             image192 = profile?["image_192"] as? String
+            image512 = profile?["image_512"] as? String
+            image1024 = profile?["image_1024"] as? String
+            imageOriginal = profile?["image_original"] as? String
             customProfile = CustomProfile(customFields: profile?["fields"] as? [String: Any])
         }
     }
-
+    
     public let id: String?
     public var name: String?
     public var deleted: Bool?
@@ -72,7 +88,7 @@ public struct User {
     public var preferences: [String: Any]?
     // Client properties
     public var userGroups: [String: String]?
-
+    
     public init(user: [String: Any]?) {
         id = user?["id"] as? String
         name = user?["name"] as? String
@@ -94,7 +110,7 @@ public struct User {
         timeZoneOffSet = user?["tz_offset"] as? Int
         preferences = user?["prefs"] as? [String: Any]
     }
-
+    
     public init(id: String?) {
         self.id = id
         self.isBot = nil
